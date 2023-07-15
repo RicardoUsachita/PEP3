@@ -15,6 +15,7 @@ public class PreguntaE {
     private Integer id;
 
     public Integer numPregunta;
+    public Integer dificultad;
     public String link;
     public Integer respuesta;
 }

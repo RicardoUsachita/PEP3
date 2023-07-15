@@ -9,5 +9,6 @@ import java.util.List;
 
 @Repository
 public interface PreguntaR extends JpaRepository<PreguntaE,Integer> {
-
+    @Query("SELECT p FROM PreguntaE p WHERE p.dificultad = :dificultad")
+    List<PreguntaE> findByDificultad(Integer dificultad);
 }
