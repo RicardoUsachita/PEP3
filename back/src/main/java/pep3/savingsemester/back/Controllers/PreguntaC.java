@@ -11,19 +11,25 @@ import java.util.List;
 @RestController("/pregunta")
 public class PreguntaC {
     @Autowired
-    PreguntaS servicio;
+    PreguntaS servicioPregunta;
+
 
     @GetMapping("/preguntas")
     public ResponseEntity<List<PreguntaE>> obtenerPreguntas() {
-        return ResponseEntity.ok(servicio.getPreguntas());
+        return ResponseEntity.ok(servicioPregunta.getPreguntas());
     }
     @GetMapping("/{id}")
     public ResponseEntity<PreguntaE> preguntaPorId(@PathVariable Integer id) {
-        return ResponseEntity.ok(servicio.getPregunta(id));
+        return ResponseEntity.ok(servicioPregunta.getPregunta(id));
     }
     @PostMapping("/agregar-pregunta")
     public ResponseEntity<Boolean> guardarPregunta(@RequestParam PreguntaE pregunta) {
-        servicio.savePregunta(pregunta);
+        servicioPregunta.savePregunta(pregunta);
         return ResponseEntity.ok(true);
+    }
+
+    @GetMapping("/generar-examen")
+    public ResponseEntity<List<PreguntaE>> generarExamen(@RequestParam Integer dificultad) {
+        return ResponseEntity.ok(servicioPregunta.generarExamen(dificultad));
     }
 }

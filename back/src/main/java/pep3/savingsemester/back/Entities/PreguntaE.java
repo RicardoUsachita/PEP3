@@ -17,5 +17,5 @@ public class PreguntaE {
     public Integer numPregunta;
     public Integer dificultad;
     public String link;
-    public Integer respuesta;
+    public Double respuesta;
 }
