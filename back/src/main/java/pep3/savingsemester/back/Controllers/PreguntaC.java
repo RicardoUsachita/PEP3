@@ -32,4 +32,6 @@ public class PreguntaC {
     public ResponseEntity<List<PreguntaE>> generarExamen(@RequestParam Integer dificultad) {
         return ResponseEntity.ok(servicioPregunta.generarExamen(dificultad));
     }
+
+
 }

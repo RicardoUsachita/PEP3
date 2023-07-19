@@ -7,5 +7,5 @@ import lombok.*;
 @Data
 public class RespuestaM {
     public Integer idPregunta;
-    public Integer respuesta;
+    public Double respuesta;
 }
