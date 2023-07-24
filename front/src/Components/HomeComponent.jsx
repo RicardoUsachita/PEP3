@@ -10,6 +10,16 @@ export default function HomeComponent() {
     localStorage.setItem("restantes", 4);
     window.location.href = "/prueba-facil";
   };
+  const ComenzarMedio = () => {
+    localStorage.setItem("puntaje", 0);
+    localStorage.setItem("restantes", 4);
+    window.location.href = "/prueba-medio";
+  };
+  const ComenzarDificil = () => {
+    localStorage.setItem("puntaje", 0);
+    localStorage.setItem("restantes", 4);
+    window.location.href = "/prueba-dificil";
+  };
 
   return (
     <div>
@@ -54,7 +64,7 @@ export default function HomeComponent() {
             Para aquellos que ya tienen conocimientos en Python y quieren poner
             a prueba sus habilidades con desafios de dificultad media.
           </h3>
-          <button type="button" class="btn btn-primary">
+          <button type="button" class="btn btn-primary" onClick={ComenzarMedio}>
             Comenzar
           </button>
         </div>
@@ -66,7 +76,7 @@ export default function HomeComponent() {
           <h3>
             Para aquellos expertos en Python que buscan los mayores desafios.
           </h3>
-          <button type="button" class="btn btn-primary">
+          <button type="button" class="btn btn-primary" onClick={ComenzarDificil}>
             Comenzar
           </button>
         </div>
