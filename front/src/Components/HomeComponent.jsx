@@ -42,59 +42,64 @@ export default function HomeComponent() {
           </b>
         </h3>
         <br></br>
+        <div className="options-container">
+          <div className="facil">
+            <h2>
+              <b>Modo Básico </b>
+            </h2>
+            <h3>
+              Para principiantes en Python que quieren sumergirse en el mundo de
+              la programación y aprender con desafios básicos y rápidos.
+            </h3>           
+              <button type="button" class="btn btn-primary" onClick={ComenzarFacil}>
+                Comenzar
+              </button>
+          </div>
+          <br></br>
+          <div className="medio">
+            <h2>
+              <b>Modo Intermedio </b>
+            </h2>
+            <h3>
+              Para aquellos que ya tienen conocimientos en Python y quieren poner
+              a prueba sus habilidades con desafios de dificultad media.
+            </h3>
+            <button type="button" class="btn btn-primary" onClick={ComenzarMedio}>
+              Comenzar
+            </button>
+          </div>
+          <br></br>
+          <div className="dificil">
+            <h2>
+              <b>Modo Avanzado </b>
+            </h2>
+            <h3>
+              Para aquellos expertos en Python que buscan los mayores desafios.
+            </h3>
+            
+            <button type="button" class="btn btn-primary" onClick={ComenzarDificil}>
+              Comenzar
+            </button>
+            
+          </div>
 
-        <div className="facil">
-          <h2>
-            <b>Modo Básico 🙂</b>
-          </h2>
-          <h3>
-            Para principiantes en Python que quieren sumergirse en el mundo de
-            la programación y aprender con desafios básicos y rápidos.
-          </h3>
-          <button type="button" class="btn btn-primary" onClick={ComenzarFacil}>
-            Comenzar
-          </button>
+          <br></br>
+          <div className="nueva-pregunta">
+            <h2>
+              <b>Agregar un nuevo desafio </b>
+            </h2>
+            <h3>
+              ¿Has creado un desafio y quieres ver como otros se enfrentan a el?
+              Accede a esta opción para agregar a un nuevo desafio.
+            </h3>
+            
+            <button type="button" class="btn btn-primary">
+              Acceder
+            </button>
+            
+          </div>
+          <br></br>
         </div>
-        <br></br>
-        <div className="medio">
-          <h2>
-            <b>Modo Intermedio 🤔</b>
-          </h2>
-          <h3>
-            Para aquellos que ya tienen conocimientos en Python y quieren poner
-            a prueba sus habilidades con desafios de dificultad media.
-          </h3>
-          <button type="button" class="btn btn-primary" onClick={ComenzarMedio}>
-            Comenzar
-          </button>
-        </div>
-        <br></br>
-        <div className="dificil">
-          <h2>
-            <b>Modo Avanzado 😈</b>
-          </h2>
-          <h3>
-            Para aquellos expertos en Python que buscan los mayores desafios.
-          </h3>
-          <button type="button" class="btn btn-primary" onClick={ComenzarDificil}>
-            Comenzar
-          </button>
-        </div>
-
-        <br></br>
-        <div className="nueva-pregunta">
-          <h2>
-            <b>Agregar un nuevo desafio 🐍 </b>
-          </h2>
-          <h3>
-            ¿Has creado un desafio y quieres ver como otros se enfrentan a el?
-            Accede a esta opción para agregar a un nuevo desafio.
-          </h3>
-          <button type="button" class="btn btn-primary">
-            Acceder
-          </button>
-        </div>
-        <br></br>
       </HomeStyle>
     </div>
   );
@@ -102,11 +107,20 @@ export default function HomeComponent() {
 
 const GlobalStyle = createGlobalStyle`
 body {
-    background-color: #9E0F20;
+    background-color: #97D2FB;
 }
 `;
 
 const HomeStyle = styled.nav`
+
+.options-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Opcional, para espaciar los elementos */
+  margin: 0 auto;
+  max-width: 900px; /* Opcional, establece el ancho máximo del contenedor */
+}
+
 .text-center {
     justify-content: center;
     display: flex;
@@ -114,61 +128,21 @@ const HomeStyle = styled.nav`
     align-items: center;
     padding: 20px;
     color: #fff;
+    font-family: "Source Code Pro", sans-serif;
 }
 
-.facil{
+
+.facil, .medio, .dificil, .nueva-pregunta {
     justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #FDFEFE;
-    background-color: #1F618D;
+    color: #fff;
+    background-color: #83BCFF;
     border-radius: 25px;
     padding: 20px;
     width: 60%;
-    margin: auto;
-    border: 5px solid #FDFEFE;
-}
-
-.dificil{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #FDFEFE;
-    background-color: #1F618D;
-    border-radius: 25px;
-    padding: 20px;
-    width: 60%;
-    margin: auto;
-    border: 5px solid #FDFEFE;
-}
-
-.medio{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #FDFEFE;
-    background-color: #1F618D;
-    border-radius: 25px;
-    padding: 20px;
-    width: 60%;
-    margin: auto;
-    border: 5px solid #FDFEFE;
-}
-
-.nueva-pregunta{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #FDFEFE;
-    background-color: #1F618D;
-    border-radius: 25px;
-    padding: 20px;
-    width: 60%;
-    margin: auto;
-    border: 5px solid #FDFEFE;
+    margin: 10px;
+    border: 5px solid #80FFE8;
 }
 `;

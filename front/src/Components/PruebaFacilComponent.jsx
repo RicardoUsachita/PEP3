@@ -31,7 +31,7 @@ class PruebaFacilComponent extends Component {
           {this.state.datas.map((datas) => (
             <Preguntas
               id={datas.id}
-              enunciado={datas.enunciado}
+              enunciado={datas.pregunta}
               code={datas.codigo}
               resp={datas.respuesta}
             ></Preguntas>

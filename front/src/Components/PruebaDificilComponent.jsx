@@ -3,7 +3,7 @@ import Preguntas from "./PreguntasComponent";
 import styled from "styled-components";
 import Navbar from "./NavbarComponent";
 
-class PruebaDificilComponent{
+class PruebaDificilComponent extends Component{
     constructor(props) {
         super(props);
         this.state = {

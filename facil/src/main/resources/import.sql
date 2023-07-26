@@ -1,0 +1,4 @@
+insert into pregunta_facil(id, pregunta, codigo, respuesta) values (1, "Que imprime el siguiente codigo?", "a = 3\nb = 7\nc = 9\na = c % b\nb = a // b % c\nprint(a * b + c % a + b + c)", "10");
+insert into pregunta_facil(id, pregunta, codigo, respuesta) values (2, "Cual es el resultado al evaluar en Python?", "a = 8\nb = 4\nc = 2\nd = a // b % c ** c\nprint(d)", "2");
+insert into pregunta_facil(id, pregunta, codigo, respuesta) values (3, "Que se imprime por pantalla?", "n = 15\nh = 5\nwhile n >=1:\n  if n % 2 != 0:\n        h = h + n\n  n = n-1\nprint(h//3)", "23");
+insert into pregunta_facil(id, pregunta, codigo, respuesta) values (4, "Que valor se muestra por pantalla?", "a = 8\nb = 9\nc = 12\nprint(a + b * c % 3)", "8");
