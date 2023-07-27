@@ -10,7 +10,7 @@ spring:
       uri: http://localhost:8081
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     dbname: prueba_dificil

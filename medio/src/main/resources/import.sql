@@ -1,0 +1,9 @@
+
+INSERT INTO preguntas_medio(id, pregunta, codigo, respuesta) VALUES (1, "Cual es la salida del siguiente codigo?", "cadena = '¡Hola Mundo!'\nresultado = cadena[1:12:2]\nprint(resultado)", "Hl ud!");
+INSERT INTO preguntas_medio(id, pregunta, codigo, respuesta) VALUES (2, "Cual es la salida del siguiente codigo?", "def invertir_palabra(palabra):\n    return palabra[::-1]\n\nmensaje = 'Python es genial'\nresultado = invertir_palabra(mensaje)\nprint(resultado)", "laineg se nohtyP");
+INSERT INTO preguntas_medio(id, pregunta, codigo, respuesta) VALUES (3, "Cual es la salida del siguiente codigo?", "def funcion(cadena, caracter):\n    return caracter.join(cadena)\n\nmensaje = 'Hola'\nresultado = funcion(mensaje, '-')\nprint(resultado)", "H-o-l-a");
+INSERT INTO preguntas_medio(id, pregunta, codigo, respuesta) VALUES (4, "Cual es la salida del siguiente codigo?", "mensaje = '¡Hola a todos!'\nresultado = mensaje.split(' ')\nprint(resultado)", "['¡Hola', 'a', 'todos!']");
+INSERT INTO preguntas_medio(id, pregunta, codigo, respuesta) VALUES (5, "Cual es el valor de 'resultado'?", "cadena1 = 'Hola'\ncadena2 = 'Mundo'\nresultado = len(cadena1 + cadena2)", "9");
+INSERT INTO preguntas_medio(id, pregunta, codigo, respuesta) VALUES (6, "Cual es la salida del siguiente codigo?", "lista = ['a','b','c']\nlista2 = []\nfor letra in lista:\n    lista2.append(letra.upper())\n\nprint(lista2)", "['A','B','C']");
+INSERT INTO preguntas_medio(id, pregunta, codigo, respuesta) VALUES (7, "Cuantos numeros imprime el siguiente codigo?", "i = list(range(5))\nfor num in i:\n    if(num % 2 == 0):\n        print(num)", "3");
+INSERT INTO preguntas_medio(id, pregunta, codigo, respuesta) VALUES (8, "En que linea de codigo hay un error?", "for i in range(10):\n    if i % 2 == 0:\n        print('Modulo 2')\n    else if 1 % 3 == 0:\n        print('Modulo 3')\n    else:\n        print('No es modulo 2 ni 3')", "4");

@@ -68,7 +68,7 @@ const HomeStyle = styled.nav`
   }
   
   button {
-    background-color: #4CAF50;
+    background-color: #83BCFF;
     border: none;
     color: white;
     padding: 10px 20px;

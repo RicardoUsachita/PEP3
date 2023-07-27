@@ -2,24 +2,28 @@ package pep3.medio.clases;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/pregunta")
+@RequestMapping("/medio")
 public class PreguntaC {
     @Autowired
     private PreguntaS servicio;
     @GetMapping
-    public ResponseEntity<List<PreguntaE>> obtenerPreguntas(){
-        List<PreguntaE> preguntas = servicio.obtenerData();
+    public ResponseEntity<ArrayList<PreguntaE>> obtenerPreguntas(){
+        ArrayList<PreguntaE> preguntas = servicio.obtenerAleatorias();
         if(preguntas.isEmpty()){
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(preguntas);
+    }
+
+    @PostMapping
+    public void guardarPregunta(@RequestBody PreguntaE pregunta){
+        servicio.guardarData(pregunta);
     }
 }

@@ -24,13 +24,13 @@ class PruebaDificilComponent extends Component{
             <div className="text-center">
               <h1 className="asd">
                 <b>
-                  <u>Prueba: Modo Medio </u>
+                  <u>Prueba: Modo Dificil </u>
                 </b>
               </h1>
               {this.state.datas.map((datas) => (
                 <Preguntas
                   id={datas.id}
-                  enunciado={datas.enunciado}
+                  enunciado={datas.pregunta}
                   code={datas.codigo}
                   resp={datas.respuesta}
                 ></Preguntas>

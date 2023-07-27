@@ -9,7 +9,6 @@ export default function PreguntasComponent({ id, enunciado, code, resp }) {
   const initialState = {
     answer: "",
   };
-
   const [puntaje, setPuntaje] = useState(
     localStorage.getItem("puntaje") ? localStorage.getItem("puntaje") : 0
   );
@@ -43,7 +42,7 @@ export default function PreguntasComponent({ id, enunciado, code, resp }) {
       <HomeStyle>
         <h3 className="text-enunciado">
           <b>
-            Pregunta {id}: {enunciado}
+            Pregunta: {enunciado}
           </b>
         </h3>
         <div className="code-box">
@@ -88,7 +87,7 @@ export default function PreguntasComponent({ id, enunciado, code, resp }) {
 
 const GlobalStyle = createGlobalStyle`
 body { 
-    background-color: #154360;
+    background-color: #83BCFF;
 }
 `;
 
@@ -115,7 +114,7 @@ button {
     font-weight: 700;
     color: #1b3039;
     padding: 9px 25px;
-    background: #7dcea0;
+    background: #80FFE8;
     border: none;
     border-radius: 50px;
     cursor: pointer;

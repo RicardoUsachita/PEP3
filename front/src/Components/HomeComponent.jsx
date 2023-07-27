@@ -21,6 +21,10 @@ export default function HomeComponent() {
     window.location.href = "/prueba-dificil";
   };
 
+  const AddAsk = () => {
+    window.location.href = "/agregar-pregunta";
+  };
+
   return (
     <div>
       <GlobalStyle />
@@ -93,7 +97,7 @@ export default function HomeComponent() {
               Accede a esta opción para agregar a un nuevo desafio.
             </h3>
             
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" onClick={AddAsk}>
               Acceder
             </button>
             
@@ -116,9 +120,9 @@ const HomeStyle = styled.nav`
 .options-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Opcional, para espaciar los elementos */
+  justify-content: space-between;
   margin: 0 auto;
-  max-width: 900px; /* Opcional, establece el ancho máximo del contenedor */
+  max-width: 900px;
 }
 
 .text-center {

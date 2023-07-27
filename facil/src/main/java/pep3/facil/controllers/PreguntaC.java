@@ -2,9 +2,7 @@ package pep3.facil.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pep3.facil.entities.PreguntaE;
 import pep3.facil.services.PreguntaS;
 
@@ -18,10 +16,15 @@ public class PreguntaC {
     private PreguntaS servicio;
     @GetMapping
     public ResponseEntity<ArrayList<PreguntaE>> obtenerPreguntas(){
-        ArrayList<PreguntaE> preguntas = servicio.obtenerData();
+        ArrayList<PreguntaE> preguntas = servicio.obtenerAleatorias();
         if(preguntas.isEmpty()){
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(preguntas);
+    }
+
+    @PostMapping
+    public void guardarPregunta(@RequestBody PreguntaE pregunta){
+        servicio.guardarData(pregunta);
     }
 }
